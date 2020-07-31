@@ -1,0 +1,121 @@
+#Python assignment
+ 
+
+ 
+#Signing in
+ 
+import datetime
+ 
+
+ 
+while True:
+ 
+    try:
+ 
+        text = int(input("Hello Nana, enter password to log in:  "))
+ 
+    except ValueError:
+ 
+        print("Enter correct password to log in.  ")
+ 
+        continue
+ 
+    else:
+ 
+        break
+ 
+if text != 1234: 
+ 
+     print("You did not enter correct password.")
+ 
+
+ 
+else:
+ 
+
+ 
+    print("Your login time and date is\n")
+ 
+    x  = datetime.datetime.now()
+ 
+    print(x)
+ 
+
+ 
+#Asking for time input
+ 
+
+ 
+#Extract hour from the login time -make into function
+ 
+
+ 
+import datetime
+ 
+while True:
+ 
+    try:
+ 
+        login = datetime.datetime.strptime(input('enter login time in HHMM format: '), "%H%M")
+ 
+        print(login.strftime("%H"+":"+"%M"))
+ 
+        login = int(login.strftime("%H"))
+ 
+    except ValueError:
+ 
+        print("Please enter correct time in HHMM format")
+ 
+
+ 
+        continue
+ 
+    else:
+ 
+        break
+ 
+
+ 
+
+ 
+import datetime
+ 
+while True:
+ 
+    try:
+ 
+        logout = datetime.datetime.strptime(input('enter logout time in HHMM format: '), "%H%M")
+ 
+        print(logout.strftime("%H"+":"+"%M"))
+ 
+        logout = int(logout.strftime("%H"))
+ 
+
+ 
+    except ValueError:
+ 
+        print("Please enter correct time in HHMM format")
+ 
+
+ 
+        continue
+ 
+    else:
+ 
+        break
+ 
+
+ 
+#subtracting the login in and logout hours
+ 
+
+ 
+#parse string to int
+ 
+
+ 
+time_spent = logout - login
+ 
+work_time = str(time_spent)
+ 
+print("Nana, you have spent " + work_time + " hours working")
