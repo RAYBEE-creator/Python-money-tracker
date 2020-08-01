@@ -73,6 +73,11 @@ r = open("Nana's_Money_Tracker.csv", "a" )
 
 
 writer = csv.writer(r)
-writer.writerow(["Hours_worked", "Wages"])
+writer.writerow(["x", "start_time", "stop_time", "time_elapsed", "time_spent", "wages"])
+List = [x, start_time, stop_time, time_elapsed, time_spent, wages]
+
+with open(r"Nanas_Money_Tracker.csv", 'a', newline='') as file:
+    csv.writer(file).writerow(List)
+
 
 r.close()
